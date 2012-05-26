@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
+    <h:head>
+        <title>Welcome to Iranian Match memberinfo.html</title>
+    </h:head>
+    <h:body>   
+        <table>
+
+            <tr>
+                <td>Login name:</td>
+                <td>#{member.loginname} </td>
+            </tr>
+
+            <tr>
+                <td>Password:</td>
+                <td>#{member.passwd}</td>
+            </tr>
+            <tr>
+                <td>Sex:</td>
+                <td>#{member.sex}</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td>#{member.email}</td>
+            </tr>
+
+            <tr>
+                <td>Current Location:</td>
+                <td>#{member.location}</td>
+            </tr>
+            <tr>
+                <td>Education:</td>
+                <td>#{member.educaton}</td>
+            </tr>
+            <tr>
+                <td>Status:</td>
+                <td>#{member.familyStatus}</td>
+            </tr>
+
+
+            <tr>
+                <td>
+                    <h:outputLink value="registration.xhtml"><h:outputText value="Click here to reedit"/></h:outputLink>
+                </td>
+            </tr>
+        </table>
+        <br></br>
+        <br></br>
+        <br></br>
+        <table>
+            <h:form prependId="false">
+                <tr>
+                     <h:outputText value="What should interested people know about me:"></h:outputText>
+                    <td><h:inputTextarea value="#{member.aboutMe}" cols="100" rows="13" /></td>
+                </tr>
+            </h:form>
+        </table>
+    </h:body>
+
+</html>

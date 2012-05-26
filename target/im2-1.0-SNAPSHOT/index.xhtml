@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
+    <h:head>
+        <title>Welcome to Iranian Match index.html</title>
+    </h:head>
+    <table>
+        <h:body>   
+            <h:form prependId="false">
+                <h3>Please enter your name and password.</h3>
+
+                <tr>
+                    <td>Name:</td>
+                    <td><h:inputText value="#{member.loginname}" id="name"/></td>
+                </tr>
+                <tr>
+                    <td>Password:</td>
+                    <td><h:inputSecret value="#{member.password}" id="password"/></td>
+                </tr>
+                <td>
+                <p><h:commandButton value="Login" action="welcome"/></p>
+                </td>
+            </h:form>
+
+        </h:body>
+    <br/>
+        <tr>
+            <td>
+                <h:outputLink value="registration.xhtml"><h:outputText value="Click here to register"/></h:outputLink>
+            </td>
+        </tr>
+    </table>
+</html>

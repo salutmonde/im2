@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      >
+    <h:head>
+        <title>Welcome to Iranian Match registration.html</title>
+    </h:head>
+    <table>
+        <h:body>   
+            <h:form prependId="false">
+                <h3></h3>
+
+                <tr>
+                    <td>Login name:</td>
+                    <td><h:inputText value="#{member.loginname}" id="loginname"/></td>
+                </tr>
+
+                <tr>
+                    <td>Password:</td>
+                    <td><h:inputSecret value="#{member.passwd}" id="passwd"/></td>
+                </tr>
+                <tr>
+                    <td>Sex:</td>
+                    <td><h:selectOneMenu value="#{member.sex}"> 
+                            <f:selectItem itemValue="FEMALE" itemLabel="Female"></f:selectItem>
+                            <f:selectItem itemValue="MALE" itemLabel="Male"></f:selectItem>
+                             </h:selectOneMenu>
+                    </td>
+                </tr>
+                
+                   <tr>
+                    <td>Email:</td>
+                    <td><h:inputText value="#{member.email}" id="email"/></td>
+                </tr>
+
+                <tr>
+                    <td>Current Location:</td>
+                    <td><h:inputText value="#{member.location}" id="location"/></td>
+                </tr>
+                <tr>
+                    <td>Education:</td>
+                    <td><h:selectOneMenu value="${member.educaton}">
+                            <f:selectItem itemValue="PHD" itemLabel="Phd"/>
+                            <f:selectItem itemValue="MASTER" itemLabel="Master"/>
+                            <f:selectItem itemValue="BACHELOR" itemLabel="Bachelor"/>
+                            <f:selectItem itemValue="STUDENT" itemLabel="Student"/>
+                            <f:selectItem itemValue="SOMECOLLEGE" itemLabel="Somecollege"/>
+                        </h:selectOneMenu></td>
+
+                </tr>
+                <tr>
+                    <td>Family Status:</td>
+                    <td><h:selectOneMenu value="${member.familyStatus}">
+                            <f:selectItem itemValue="NEVERMARRIED" itemLabel="Never married"/>
+                            <f:selectItem itemValue="DIVORCED" itemLabel="Divorced"/>
+                            <f:selectItem itemValue="SEPARATED" itemLabel="Separated"/>
+                            <f:selectItem itemValue="WIDOWED" itemLabel="Widowed"/>
+                            <f:selectItem itemValue="SOMECOLLEGE" itemLabel="Some college"/>
+                        </h:selectOneMenu></td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <p><h:commandButton value="Register" action="memberInfo"/></p>
+                    </td>
+                </tr>
+            </h:form>
+
+        </h:body>
+
+    </table>
+</html>
